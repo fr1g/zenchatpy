@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}Main::PyChatty{% endblock %}
+
+{% block content %}
+<div class="mb-8">
+    <div class="bg-white rounded-lg shadow-lg p-8">
+        <h1 class="text-4xl font-bold text-gray-900 mb-4">Welcome to PyChatty</h1>
+        <p class="text-lg text-gray-600 mb-4">Django Message Sender, send to anyone!</p>
+        <hr>
+        <p class="text-gray-700 mt-4">Quickstart ↓</p>
+    </div>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+        <div class="p-6 text-center">
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">Contact List</h3>
+            <p class="text-gray-600 mb-4">Lookup All</p>
+            <a href="{% url 'contact_list' %}" class="inline-block bg-emerald-600 text-white px-6 py-2 rounded-lg hover:bg-emerald-700 transition-colors duration-300">GO</a>
+        </div>
+    </div>
+    
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+        <div class="p-6 text-center">
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">Search Your Contacts</h3>
+            <p class="text-gray-600 mb-4">Search By Name Or Email</p>
+            <a href="{% url 'search_form' %}" class="inline-block bg-emerald-600 text-white px-6 py-2 rounded-lg hover:bg-emerald-700 transition-colors duration-300">GO</a>
+        </div>
+    </div>
+    
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+        <div class="p-6 text-center">
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">Add New</h3>
+            <p class="text-gray-600 mb-4">Add New People</p>
+            <a href="{% url 'contact_create' %}" class="inline-block bg-emerald-600 text-white px-6 py-2 rounded-lg hover:bg-emerald-700 transition-colors duration-300">GO</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

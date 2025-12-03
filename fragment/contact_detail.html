@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ contact.name }} - details{% endblock %}
+
+{% block content %}
+<div class="max-w-2xl mx-auto">
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+        <div class="px-6 py-4 border-b border-gray-200">
+            <h2 class="text-2xl font-semibold text-gray-900">Details</h2>
+        </div>
+        <div class="p-6">
+            <div class="space-y-4">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                    <div class="font-medium text-gray-700">ID:</div>
+                    <div class="md:col-span-3 text-gray-900">{{ contact.id }}</div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                    <div class="font-medium text-gray-700">Name:</div>
+                    <div class="md:col-span-3 text-gray-900">{{ contact.name }}</div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                    <div class="font-medium text-gray-700">Email:</div>
+                    <div class="md:col-span-3 text-gray-900">{{ contact.email }}</div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                    <div class="font-medium text-gray-700">Phone:</div>
+                    <div class="md:col-span-3 text-gray-900">{{ contact.phone }}</div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                    <div class="font-medium text-gray-700">Additional Info:</div>
+                    <div class="md:col-span-3 text-gray-900">
+                        {% if contact.additional and contact.additional != "-" %}
+                            {{ contact.additional|linebreaks }}
+                        {% else %}
+                            <span class="text-muted">No additional information</span>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            <div class="flex space-x-4 mt-8">
+                <a href="{% url 'contact_edit' contact.id %}" class="bg-yellow-600 text-white px-6 py-2 rounded-lg hover:bg-yellow-700 transition-colors duration-300">
+                    Edit
+                </a>
+                <a href="{% url 'contact_delete' contact.id %}" class="bg-red-600 text-white px-6 py-2 rounded-lg hover:bg-red-700 transition-colors duration-300">
+                    Delete
+                </a>
+                <a href="{% url 'contact_list' %}" class="bg-gray-600 text-white px-6 py-2 rounded-lg hover:bg-gray-700 transition-colors duration-300">
+                    Back
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

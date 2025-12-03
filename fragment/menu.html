@@ -1,0 +1,65 @@
+<nav class="bg-emerald-600 shadow-lg">
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="flex justify-between h-16">
+            <div class="flex">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="{% url 'home' %}" class="text-white text-xl font-bold">PyChatty</a>
+                </div>
+                <div class="flex space-x-1 px-3">
+                    <a href="{% url 'home' %}"
+                        class="mx-auto px-auto text-white bg-transparent block px-3 py-2 rounded-md  my-auto hover:bg-emerald-500 transition">
+                        <div class="mx-auto">Home</div>
+                    </a>
+                    <a href="{% url 'contact_list' %}"
+                        class="mx-auto px-auto text-white bg-transparent block px-3 py-2 rounded-md  my-auto hover:bg-emerald-500 transition">
+                        <div class="mx-auto">Contact List</div>
+                    </a>
+                    <a href="{% url 'search_form' %}"
+                        class="mx-auto px-auto text-white bg-transparent block px-3 py-2 rounded-md  my-auto hover:bg-emerald-500 transition">
+                        <div class="mx-auto">Search Contacts</div>
+                    </a>
+                    <a href="{% url 'contact_create' %}"
+                        class="mx-auto px-auto text-white bg-transparent block px-3 py-2 rounded-md  my-auto hover:bg-emerald-500 transition">
+                        <div class="mx-auto">Add Contact</div>
+                    </a>
+                    {% if user.is_authenticated and user.userprofile.user_type == 'admin' %}
+                    <a href="{% url 'user_list' %}"
+                        class="mx-auto px-auto text-white bg-transparent block px-3 py-2 rounded-md  my-auto hover:bg-emerald-500 transition">
+                        <div class="mx-auto">UserMgr</div>
+                    </a>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="grow"></div>
+            <div class="flex items-center space-x-4">
+                {% if user.is_authenticated %}
+                    <div class="flex items-center space-x-1">
+                        <span class="text-white text-sm">
+                            [<strong class="font-semibold">{{ user.username }}</strong>]
+                            {% if user.userprofile.user_type == 'admin' %}
+                                <span class="bg-red-500 text-white text-xs px-1 py-0.5 rounded-full ml-2">admin</span>
+                            {% else %}
+                                <span class="bg-green-500 text-white text-xs px-1 py-0.5 rounded-full ml-2">user</span>
+                            {% endif %}
+                        </span>
+                        <a href="{% url 'logout' %}" 
+                           class="text-white bg-red-500 hover:bg-red-600 px-4 py-2  scale-75 rounded-md text-sm font-medium transition">
+                            Logout
+                        </a>
+                    </div>
+                {% else %}
+                    <div class="flex items-center space-x-3">
+                        <a href="{% url 'login' %}" 
+                           class="text-white bg-transparent border border-white hover:bg-white hover:text-emerald-600 px-4 py-2 rounded-md text-sm font-medium transition">
+                            Login
+                        </a>
+                        <a href="{% url 'register' %}" 
+                           class="text-emerald-600 bg-white hover:bg-gray-100 px-4 py-2 rounded-md text-sm font-medium transition">
+                            Register
+                        </a>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</nav>
