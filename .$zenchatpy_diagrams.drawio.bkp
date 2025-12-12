@@ -1,0 +1,206 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="2cc2d294-2399-d60f-22bb-7596b5c4e748">
+    <mxGraphModel dx="1426" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- ER Diagram -->
+        <mxCell id="erTitle" value="ZenChatPy - Entity Relationship Diagram" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="100" y="20" width="200" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- User Entity -->
+        <mxCell id="userEntity" value="User" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+          <mxGeometry x="50" y="80" width="160" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="userId" value="• id (PK)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingTop=4;" vertex="1" parent="userEntity">
+          <mxGeometry y="26" width="160" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="userUsername" value="• username" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingTop=4;" vertex="1" parent="userEntity">
+          <mxGeometry y="52" width="160" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="userEmail" value="• email" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingTop=4;" vertex="1" parent="userEntity">
+          <mxGeometry y="78" width="160" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="userPassword" value="• password" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingTop=4;" vertex="1" parent="userEntity">
+          <mxGeometry y="104" width="160" height="26" as="geometry" />
+        </mxCell>
+        
+        <!-- UserProfile Entity -->
+        <mxCell id="profileEntity" value="UserProfile" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+          <mxGeometry x="280" y="80" width="180" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="profileId" value="• id (PK)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingTop=4;" vertex="1" parent="profileEntity">
+          <mxGeometry y="26" width="180" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="profileUser" value="• user_id (FK → User)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingTop=4;" vertex="1" parent="profileEntity">
+          <mxGeometry y="52" width="180" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="profileType" value="• user_type (regular/admin)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingTop=4;" vertex="1" parent="profileEntity">
+          <mxGeometry y="78" width="180" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="profileCreated" value="• created_at" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingTop=4;" vertex="1" parent="profileEntity">
+          <mxGeometry y="104" width="180" height="26" as="geometry" />
+        </mxCell>
+        
+        <!-- Contact Entity -->
+        <mxCell id="contactEntity" value="Contact" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+          <mxGeometry x="520" y="80" width="200" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="contactId" value="• id (PK)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingTop=4;" vertex="1" parent="contactEntity">
+          <mxGeometry y="26" width="200" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="contactUser" value="• user_id (FK → User)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingTop=4;" vertex="1" parent="contactEntity">
+          <mxGeometry y="52" width="200" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="contactName" value="• name" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingTop=4;" vertex="1" parent="contactEntity">
+          <mxGeometry y="78" width="200" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="contactPhone" value="• phone" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingTop=4;" vertex="1" parent="contactEntity">
+          <mxGeometry y="104" width="200" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="contactEmail" value="• email" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingTop=4;" vertex="1" parent="contactEntity">
+          <mxGeometry y="130" width="200" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="contactAdditional" value="• additional" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingTop=4;" vertex="1" parent="contactEntity">
+          <mxGeometry y="156" width="200" height="26" as="geometry" />
+        </mxCell>
+        
+        <!-- Relationships -->
+        <mxCell id="userProfileRel" value="One-to-One" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="userEntity" target="profileEntity">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="userContactRel" value="One-to-Many" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="userEntity" target="contactEntity">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- Use Case Diagram -->
+        <mxCell id="ucTitle" value="ZenChatPy - Use Case Diagram" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="100" y="300" width="200" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- Actors -->
+        <mxCell id="guestActor" value="Guest" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="50" y="360" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="regularActor" value="Regular User" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="50" y="450" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="adminActor" value="Administrator" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="50" y="540" width="30" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- System Boundary -->
+        <mxCell id="systemBoundary" value="ZenChatPy Contact Management System" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="350" width="600" height="300" as="geometry" />
+        </mxCell>
+        
+        <!-- Guest Use Cases -->
+        <mxCell id="viewHome" value="View Home Page" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="systemBoundary">
+          <mxGeometry x="50" y="30" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="register" value="Register Account" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="systemBoundary">
+          <mxGeometry x="50" y="110" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="login" value="Login" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="systemBoundary">
+          <mxGeometry x="50" y="190" width="120" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- Regular User Use Cases -->
+        <mxCell id="viewContacts" value="View Contact List" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="systemBoundary">
+          <mxGeometry x="200" y="30" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="viewContactDetail" value="View Contact Details" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="systemBoundary">
+          <mxGeometry x="200" y="110" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="createContact" value="Create Contact" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="systemBoundary">
+          <mxGeometry x="200" y="190" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="editContact" value="Edit Contact" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="systemBoundary">
+          <mxGeometry x="350" y="30" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="deleteContact" value="Delete Contact" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="systemBoundary">
+          <mxGeometry x="350" y="110" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="searchContacts" value="Search Contacts" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="systemBoundary">
+          <mxGeometry x="350" y="190" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="logout" value="Logout" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="systemBoundary">
+          <mxGeometry x="500" y="30" width="120" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- Admin Use Cases -->
+        <mxCell id="viewAllContacts" value="View All Contacts" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="systemBoundary">
+          <mxGeometry x="200" y="30" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="manageUsers" value="Manage Users" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="systemBoundary">
+          <mxGeometry x="500" y="110" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="promoteUser" value="Promote User" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="systemBoundary">
+          <mxGeometry x="500" y="190" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="demoteUser" value="Demote User" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="systemBoundary">
+          <mxGeometry x="350" y="110" width="120" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- Actor-Use Case Relationships -->
+        <mxCell id="guestHome" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="guestActor" target="viewHome">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="guestRegister" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="guestActor" target="register">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="guestLogin" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="guestActor" target="login">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="userViewContacts" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="regularActor" target="viewContacts">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="userViewDetail" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="regularActor" target="viewContactDetail">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="userCreate" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="regularActor" target="createContact">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="userEdit" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="regularActor" target="editContact">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="userDelete" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="regularActor" target="deleteContact">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="userSearch" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="regularActor" target="searchContacts">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="userLogout" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="regularActor" target="logout">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="adminAllContacts" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="adminActor" target="viewAllContacts">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="adminManageUsers" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="adminActor" target="manageUsers">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="adminPromote" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="adminActor" target="promoteUser">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="adminDemote" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="adminActor" target="demoteUser">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- Include/Extend Relationships -->
+        <mxCell id="includeSearch" value="«include»" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="viewContacts" target="searchContacts">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="extendLogin" value="«extend»" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="register" target="login">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="110" y="140" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

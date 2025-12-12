@@ -1,0 +1,39 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.8 Chrome/128.0.6613.36 Electron/32.0.1 Safari/537.36" version="24.7.8">
+  <diagram name="第 1 页" id="ldhbpabse0zu1YFq_Vr7">
+    <mxGraphModel dx="837" dy="498" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="3300" pageHeight="2339" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="qnkgvzYY9oH3KNBcxhuy-1" value="Admin" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="33" y="231" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="qnkgvzYY9oH3KNBcxhuy-7" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;endArrow=none;endFill=0;" edge="1" parent="1" source="qnkgvzYY9oH3KNBcxhuy-3" target="qnkgvzYY9oH3KNBcxhuy-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qnkgvzYY9oH3KNBcxhuy-3" value="User" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="-15" y="347" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="qnkgvzYY9oH3KNBcxhuy-4" value="manage (self)&lt;div&gt;contact&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="108" y="355" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="qnkgvzYY9oH3KNBcxhuy-5" value="[NP]&lt;br&gt;send message&lt;div&gt;to contact oriented&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="92" y="479" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="qnkgvzYY9oH3KNBcxhuy-6" value="manage users" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="96" y="174" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="qnkgvzYY9oH3KNBcxhuy-8" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.099;entryY=0.256;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=12;startSize=8;endSize=8;endArrow=none;endFill=0;" edge="1" parent="1" source="qnkgvzYY9oH3KNBcxhuy-3" target="qnkgvzYY9oH3KNBcxhuy-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qnkgvzYY9oH3KNBcxhuy-9" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;fontSize=12;startSize=8;endSize=8;endArrow=none;endFill=0;" edge="1" parent="1" source="qnkgvzYY9oH3KNBcxhuy-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="98" y="227" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qnkgvzYY9oH3KNBcxhuy-10" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=12;startSize=8;endSize=8;endArrow=none;endFill=0;dashed=1;dashPattern=8 8;" edge="1" parent="1" source="qnkgvzYY9oH3KNBcxhuy-1" target="qnkgvzYY9oH3KNBcxhuy-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
