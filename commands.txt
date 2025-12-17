@@ -1,0 +1,112 @@
+# ZenChatPy - Project Commands and Maintenance Guide
+# This file contains all essential commands for running and maintaining the ZenChatPy application
+
+# !!! Typical development workflow:
+# 1. Activate virtual environment
+
+# 2. Make model changes in work/models.py
+
+# 3. Create migrations: 
+python manage.py makemigrations
+
+# 4. Apply migrations: 
+python manage.py migrate
+
+# 5. Start server: 
+python manage.py runserver
+
+# // detailed: 
+
+# ============================================================================
+# PROJECT SETUP AND INSTALLATION
+# ============================================================================
+
+# Install Python dependencies (if requirements.txt exists)
+# Note: This project uses Django 5.2.5 and Django REST Framework
+pip install django==5.2.5 djangorestframework
+
+# Create a virtual environment (recommended)
+python -m venv venv
+
+# Activate virtual environment (Windows)
+venv\Scripts\activate
+
+# Activate virtual environment (Linux/Mac)
+source venv/bin/activate
+
+# ============================================================================
+# DATABASE MANAGEMENT
+# ============================================================================
+
+# Create database migrations for model changes
+python manage.py makemigrations
+
+# Apply database migrations
+python manage.py migrate
+
+# Show current migration status
+python manage.py showmigrations
+
+# Create a superuser account for admin access
+python manage.py createsuperuser
+
+# Run the custom admin user creation command
+python manage.py ensure_admin
+
+# ============================================================================
+# DEVELOPMENT SERVER
+# ============================================================================
+
+# Start the Django development server (default port 8000)
+python manage.py runserver
+
+# Start server on specific port
+python manage.py runserver 8080
+
+# Start server on specific IP and port
+python manage.py runserver 0.0.0.0:8000
+
+# ============================================================================
+# TESTING AND VALIDATION
+# ============================================================================
+
+# Run all tests in the project
+python manage.py test
+
+# Run tests for specific app
+python manage.py test work
+
+# Run tests with verbosity
+python manage.py test --verbosity=2
+
+# Check for any issues in the project
+python manage.py check
+
+# ============================================================================
+# ADMINISTRATIVE COMMANDS
+# ============================================================================
+
+# Open Django shell for interactive database access
+python manage.py shell
+
+# Collect static files for production
+python manage.py collectstatic
+
+# Create a new Django app
+python manage.py startapp app_name
+
+# ============================================================================
+# PROJECT SPECIFIC COMMANDS
+# ============================================================================
+
+# Check the current working directory
+pwd
+
+# List project files and structure
+ls -la
+
+# Check Python version
+python --version
+
+# Check Django version
+python -m django --version

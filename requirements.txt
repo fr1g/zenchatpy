@@ -1,0 +1,9 @@
+[OS]
+Windows10 24H2+ / Windows11 24H2+ (ensured, tested)
+Linux distro with Kernel version 5+
+
+[Python Depend.]
+Python 3.11+
+Django 5.2.5
+
+[]
